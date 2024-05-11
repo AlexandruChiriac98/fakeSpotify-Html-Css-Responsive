@@ -16,10 +16,6 @@ aside{
     flex-shrink: 0;
 }
 
-main{
-    flex-grow: 1;
-}
-
 footer{
     flex-shrink: 0;
     padding: 1rem;
@@ -29,6 +25,33 @@ footer{
 /*******
         UTILITYES
                     ******/
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row>*{
+    padding: 0 .5rem;
+}
+
+.row-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+                    
+
+.card{
+    text-align: center;
+}
+
+.img-card{
+    position: relative;
+}
+
+.container{
+    width: 100%;
+}
 
 .viewport{
     display: flex;
@@ -39,7 +62,7 @@ footer{
 
 .viewport .viewport-up{
     display: flex;
-    flex-grow: 1;
+    height: 95%;
 }
 
 /*****padding*****/
@@ -56,6 +79,10 @@ footer{
     padding-top: 1rem;
 }
 
+.pd-top-2rem{
+    padding-top: 2rem;
+}
+
 /******button*****/
 
 .bt{
@@ -63,6 +90,23 @@ footer{
     border: 1px solid white;
     border-radius: 25px;
     color: white;
+}
+
+.bt-card{
+    border: none;
+    color: white;
+}
+
+.bt-play{
+    width: 100%;
+    height: 99%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000070;
+    transition: all .3s;
+    opacity: 0;
 }
 
 .bt-large{
@@ -78,13 +122,8 @@ footer{
         ASIDE
                 ******/
 
-.row-col{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 aside{
+    z-index: 51;
     color: white;
     background-color: black;
 }
@@ -170,12 +209,22 @@ aside .aside-bottom ul li .line{
             ********/
 
 main{
+    overflow: auto;
     color: white;
     background-color: rgb(83, 83, 83);
 }
 
+main section{
+    margin-top: 5rem;
+}
+
 /*******article*******/
 article{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
     background-color: rgb(19, 19, 19);
 }
 
@@ -197,7 +246,7 @@ section .container nav ul{
 }
 
 section .container nav ul li{
-    padding: .5rem 1rem;
+    padding: .5rem .5rem;
 }
 
 section .container nav ul li a{
@@ -207,4 +256,39 @@ section .container nav ul li a{
 
 section .container nav ul li a:hover{
     color: white;
+}
+
+section .col-1_2{
+    width: calc(100% / 2);
+}
+
+section .card{
+    color: lightgray;
+    padding: .7rem 0 ;
+}
+
+section small{
+    color: lightgray;
+}
+
+section .card img {
+    width: 100%;
+}
+
+section .card strong{
+    padding-top: 1rem;
+    display: block;
+    color: white;
+}
+section .card button i{
+    font-size: 3rem;
+}
+
+section .img-card:hover>.bt-play {
+    opacity: 1;
+    backdrop-filter: blur(4px);
+}
+
+section .card .img-card .circle{
+    border-radius: 50%;
 }
