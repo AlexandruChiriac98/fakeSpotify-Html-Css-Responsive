@@ -1,0 +1,44 @@
+@media screen and (min-width: 568px){
+    body{
+        font-size: 1.1rem;
+    }
+
+
+    /*****ASIDE*****/
+    aside ul li,
+    aside ul li .aside-text,
+    aside .logo .aside-text{
+   display: flex ;
+   justify-content: left;
+    }
+
+   aside .aside-middle{
+    display: block;
+   }
+
+   aside .aside-bottom{
+    display: block;
+   }
+
+   /*******MAIN*****/
+   .bt-large{
+    padding: 1rem .5rem;
+   }
+
+   main .pd-md-2rem{
+    padding: 2rem;
+   }
+}
+
+@media screen and (min-width: 768px) {
+    body{
+        font-size: 1.2rem;
+    }
+    
+}
+
+@media screen and (min-width: 992px) {
+    body{
+        font-size: 1.3rem;
+    }
+}

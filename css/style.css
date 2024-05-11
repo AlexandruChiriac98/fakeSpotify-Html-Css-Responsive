@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    font-size: 14px;
+    font-family: roboto, sans-serif;
+}
+
+aside{
+    flex-shrink: 0;
+}
+
+main{
+    flex-grow: 1;
+}
+
+footer{
+    flex-shrink: 0;
+    padding: 1rem;
+    border: 1px solid green;
+}
+
+/*******
+        UTILITYES
+                    ******/
+
+.viewport{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.viewport .viewport-up{
+    display: flex;
+    flex-grow: 1;
+}
+
+/*****padding*****/
+
+.pd-1rem{
+    padding: 1rem;
+}
+
+.pd-top-bot-1rem{
+    padding: 1rem 0;
+}
+
+.pd-top-1rem{
+    padding-top: 1rem;
+}
+
+/******button*****/
+
+.bt{
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 25px;
+    color: white;
+}
+
+.bt-large{
+    padding: .7rem .4rem;
+}
+
+.bt-large:hover{
+    cursor: pointer;
+    background-color: rgba(211, 211, 211, 0.322);
+}
+
+/*******
+        ASIDE
+                ******/
+
+.row-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+aside{
+    color: white;
+    background-color: black;
+}
+
+aside>*{
+    padding: .3rem;
+}
+
+aside ul{
+    list-style: none;
+}
+
+aside .logo{
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+aside .logo .logo-img i{
+    font-size: 2rem;
+}
+
+aside ul li:hover{
+    color: white;
+    cursor: pointer;
+}
+
+aside ul li,
+aside .logo .logo-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .4rem 0;
+}
+
+aside ul li .aside-text,
+aside .logo .aside-text{
+   display: none;
+   padding-left: .4rem;
+   font-size: 1rem;
+}
+
+aside .aside-top{
+    flex-shrink: 0;
+    color: lightgray;
+}
+
+aside .aside-middle{
+    flex-grow: 1;
+    display: none;
+    color: lightgray;
+}
+
+aside .aside-middle .playlist-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+    width: 1.5rem;
+    background-color: lightgray;
+    color: black;
+    margin-right: .5rem;
+}
+
+aside .aside-middle ul li{
+    padding: .4rem 0;
+    font-size: 1rem;
+}
+
+aside .aside-bottom{
+    color: lightgray;
+    flex-shrink: 0;
+}
+
+aside .aside-bottom ul li .line{
+    background-color: lightgray;
+    height: 1px;
+    width: 90%;
+}
+
+/********
+        MAIN   
+            ********/
+
+main{
+    color: white;
+    background-color: rgb(83, 83, 83);
+}
+
+/*******article*******/
+article{
+    background-color: rgb(19, 19, 19);
+}
+
+article .container{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*******section*******/
+
+section .container nav{
+    text-align: center;
+}
+
+section .container nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+section .container nav ul li{
+    padding: .5rem 1rem;
+}
+
+section .container nav ul li a{
+    text-decoration: none;
+    color: lightgray;
+}
+
+section .container nav ul li a:hover{
+    color: white;
+}
